@@ -7,6 +7,8 @@ jobs:
   test:
     name: run test
     runs-on: ubuntu-latest
+    env:
+      BUILD_ID: ${{github.run_attempt}}
     steps:
       - name: checkout repo
         uses: actions/checkout@v3
@@ -20,7 +22,7 @@ jobs:
           path: |
             /tmp/.gradle/caches
             /tmp/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle.kts', '**/gradle-wrapper.properties') }}
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle.kts*', './gradle/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
 #      - run: ./auto/test
