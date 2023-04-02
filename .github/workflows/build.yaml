@@ -16,4 +16,5 @@ jobs:
           version: 1.0
 #      - run: ./auto/test
       - run: ./auto/publish
+      - run: docker build . --file Dockerfile --build-arg JAR_FILE=./app/build/libs/app.jar -t hello:test
 
