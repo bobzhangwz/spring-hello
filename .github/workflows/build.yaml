@@ -20,5 +20,8 @@ jobs:
           path: |
             /tmp/.gradle/caches
             /tmp/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle.kts', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
 #      - run: ./auto/test
       - run: ./auto/publish
