@@ -1,0 +1,18 @@
+---
+name: build
+on:
+  push:
+    branches: [master]
+jobs:
+  test:
+    name: run test
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v3
+      - name: Install docker
+        uses: papodaca/install-docker-action@main
+      - name: Install Compose
+        uses: ndeloof/install-compose-action@v0.0.1
+      - run: ./auto/test
+      - run: ./auto/publish
+
