@@ -7,4 +7,4 @@ cd $(dirname ${BASH_SOURCE[0]})/..
 
 ./auto/test gradle clean app:bootJar
 
-docker build . --file Dockerfile --build-arg JAR_FILE=./app/build/libs/app.jar -t ${REPOSITORY}:${BUILD_NUMBER}
+## docker build . --file Dockerfile --build-arg JAR_FILE=./app/build/libs/app.jar -t ${REPOSITORY}:${BUILD_NUMBER}
