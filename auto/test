@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash -eux
 
 PWD=`dirname ${BASH_SOURCE[0]}`
 
