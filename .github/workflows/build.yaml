@@ -25,5 +25,5 @@ jobs:
           key: ${{ runner.os }}-gradle
           restore-keys: |
             ${{ runner.os }}-gradle-
-#      - run: ./auto/test
+      - run: ./auto/test
       - run: ./auto/publish
