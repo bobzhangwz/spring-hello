@@ -5,7 +5,7 @@ services:
     working_dir: /app
     volumes:
       - ".:/app"
-      - "gradle-cache:/home/gradle/.gradle"
+      - "/tmp/.gradle:/home/gradle/.gradle"
 
   dev:
     <<: *base
@@ -16,6 +16,3 @@ services:
   build:
     <<: *base
     command: gradle test
-
-volumes:
-  gradle-cache:

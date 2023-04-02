@@ -14,5 +14,11 @@ jobs:
         with:
           packages: moby-engine moby-cli docker-compose
           version: 1.0
+      - name: Cache Gradle packages
+        uses: actions/cache@v3
+        with:
+          path: |
+            /tmp/.gradle/caches
+            /tmp/.gradle/wrapper
 #      - run: ./auto/test
       - run: ./auto/publish
