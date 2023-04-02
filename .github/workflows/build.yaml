@@ -10,10 +10,9 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@v3
-      - name: Install docker
-        uses: papodaca/install-docker-action@main
-      - name: Install Compose
-        uses: ndeloof/install-compose-action@v0.0.1
+      - name: Install package
+        run: |
+          sudo apt-get -y install docker-ce docker-compose
       - run: ./auto/test
       - run: ./auto/publish
 
