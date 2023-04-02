@@ -10,9 +10,10 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@v3
-      - name: Install package
-        run: |
-          sudo apt-get -y install moby-engine moby-cli docker-compose
+      - uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: moby-engine moby-cli docker-compose
+          version: 1.0
       - run: ./auto/test
       - run: ./auto/publish
 
