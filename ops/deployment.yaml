@@ -17,7 +17,6 @@ spec:
     - port: 80
       targetPort: 8080
       protocol: TCP
-  type: NodePort
   selector:
     app: hello-world-spring
 
