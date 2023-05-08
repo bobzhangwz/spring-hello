@@ -44,17 +44,17 @@ spec:
           name: weblfux-bff
           ports:
             - containerPort: 8080
-          livenessProbe:
-            httpGet:
-              path: /actuator/health/liveness
-              port: 8081
-            initialDelaySeconds: 30
-            failureThreshold: 1
-            periodSeconds: 60
-          startupProbe:
-            httpGet:
-              path: /actuator/health/readiness
-              port: 8081
-            initialDelaySeconds: 15
-            failureThreshold: 3
-            periodSeconds: 10
+#          livenessProbe:
+#            httpGet:
+#              path: /actuator/health/liveness
+#              port: 8081
+#            initialDelaySeconds: 30
+#            failureThreshold: 1
+#            periodSeconds: 60
+#          startupProbe:
+#            httpGet:
+#              path: /actuator/health/readiness
+#              port: 8081
+#            initialDelaySeconds: 15
+#            failureThreshold: 3
+#            periodSeconds: 10
