@@ -1,6 +1,6 @@
 #!/bin/bash -eux
 
-REPOSITORY=${REPOSITORY-hello_world_spring}
+REPOSITORY=${REPOSITORY-hello-world-spring}
 REGISTRY=${REGISTRY-'160071257600.dkr.ecr.ap-northeast-1.amazonaws.com'}
 
 BUILD_NUMBER=0.0.${BUILD_ID-DEV}

@@ -10,7 +10,7 @@ metadata:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello_world_spring
+  name: hello-world-spring
   namespace: dojo
 spec:
   ports:
@@ -19,24 +19,24 @@ spec:
       protocol: TCP
   type: NodePort
   selector:
-    app: hello_world_spring
+    app: hello-world-spring
 
 ---
 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello_world_spring
+  name: hello-world-spring
   namespace: dojo
 spec:
   selector:
     matchLabels:
-      app: hello_world_spring
+      app: hello-world-spring
   replicas: $REPLICA_COUNT
   template:
     metadata:
       labels:
-        app: hello_world_spring
+        app: hello-world-spring
     spec:
       containers:
         - image: "$IMAGE"
