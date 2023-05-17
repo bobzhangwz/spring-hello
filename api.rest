@@ -1,0 +1,5 @@
+GET http://localhost:8080/hello?name=world
+
+### GET
+
+GET http://localhost:7777/api/v1/hello?name=test

@@ -5,8 +5,6 @@
  * This project uses @Incubating APIs which are subject to change.
  */
 
-
-
 pluginManagement {
     plugins {
         id("org.springframework.boot") version "3.0.5"
