@@ -29,13 +29,11 @@ dependencies {
 }
 
 tasks.getByName("bootJar") {
-    dependsOn("downloadAgent")
-}
-
-task( "downloadAgent") {
-    download.run {
-        src("https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/latest/download/opentelemetry-javaagent.jar")
-        dest("${project.buildDir.toString()}/otel/opentelemetry-javaagent.jar")
+    doLast {
+        download.run {
+            src("https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/latest/download/opentelemetry-javaagent.jar")
+            dest("${project.buildDir.toString()}/otel/opentelemetry-javaagent.jar")
+        }
     }
 }
 
